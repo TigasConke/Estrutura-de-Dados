@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Estrutura de um nó da lista duplamente encadeada
 typedef struct no {
 
     int valor;
@@ -10,7 +9,6 @@ typedef struct no {
 
 } no;
 
-// Estrutura da lista duplamente encadeada
 typedef struct {
 
     no* inicio;
@@ -18,7 +16,6 @@ typedef struct {
 
 } ListaDuplamenteEncadeada;
 
-// Função para inicializar a lista
 void inicializaLista(ListaDuplamenteEncadeada* lista) {
 
     lista->inicio = NULL;
@@ -26,7 +23,6 @@ void inicializaLista(ListaDuplamenteEncadeada* lista) {
 
 }
 
-// Função para criar um novo nó
 no* criadorNo(int valor) {
 
     no* novoNo = (no*)malloc(sizeof(no));
@@ -158,21 +154,22 @@ void imprime(ListaDuplamenteEncadeada* lista) {
     printf("\n");
 }
 
-// Função principal para testar as operações
 int main() {
 
     ListaDuplamenteEncadeada lista;
     inicializaLista(&lista);
 
-    insereLista(&lista, 10, 0); // Inserir 10 no início
+    insereLista(&lista, 34, 0); // Inserir 34 no início
+    insereLista(&lista, 89, 1); // Inserir 89 no final
     insereLista(&lista, 20, 1); // Inserir 20 no final
-    insereLista(&lista, 30, 1); // Inserir 30 no final
     imprime(&lista);
+
+    insereLista(&lista, 23, 13);
 
     removeValor(&lista, 20); // Remover o valor 20
     imprime(&lista);
 
-    removeValor(&lista, 40); // Tentar remover um valor inexistente
+    removeValor(&lista, 40); // valor inexistente
     imprime(&lista);
 
     return 0;
