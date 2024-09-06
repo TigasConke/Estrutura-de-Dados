@@ -41,7 +41,6 @@ no* criadorNo(int valor) {
 
 }
 
-// Função para inserir um valor na lista
 void insereLista(ListaDuplamenteEncadeada* lista, int valor, int posicao) {
 
     no* novoNo = criadorNo(valor);
@@ -132,7 +131,6 @@ void removeValor(ListaDuplamenteEncadeada* lista, int valor) {
 
 }
 
-// Função para imprimir o conteúdo da lista
 void imprime(ListaDuplamenteEncadeada* lista) {
 
     if (lista->inicio == NULL) {
