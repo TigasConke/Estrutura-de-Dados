@@ -41,12 +41,12 @@ no* criadorNo(int valor) {
 
 }
 
-// Função para inserir um valor na lista
+// FunÃ§Ã£o para inserir um valor na lista
 void insereLista(ListaDuplamenteEncadeada* lista, int valor, int posicao) {
 
     no* novoNo = criadorNo(valor);
 
-    if (posicao == 0) { // Inserir no início
+    if (posicao == 0) { // Inserir no inÃ­cio
 
         if (lista->inicio == NULL) { // Lista vazia
 
@@ -56,7 +56,7 @@ void insereLista(ListaDuplamenteEncadeada* lista, int valor, int posicao) {
         } else {
 
             novoNo->proximo = lista->inicio;
-            lista->inicio->anterior = novoNo; //nó inicio atual tem seu ponteiro anterior apontado para novoNo
+            lista->inicio->anterior = novoNo; //nÃ³ inicio atual tem seu ponteiro anterior apontado para novoNo
             lista->inicio = novoNo;
 
         }
@@ -70,7 +70,7 @@ void insereLista(ListaDuplamenteEncadeada* lista, int valor, int posicao) {
         } else {
 
             novoNo->anterior = lista->fim;
-            lista->fim->proximo = novoNo; //nó final atual tem seu ponteiro proximo apontado para novoNo
+            lista->fim->proximo = novoNo; //nÃ³ final atual tem seu ponteiro proximo apontado para novoNo
             lista->fim = novoNo;
 
         }
@@ -83,7 +83,6 @@ void insereLista(ListaDuplamenteEncadeada* lista, int valor, int posicao) {
     }
 }
 
-// Função para remover um valor específico da lista
 void removeValor(ListaDuplamenteEncadeada* lista, int valor) {
 
     if (lista->inicio == NULL) { // Lista vazia
@@ -100,7 +99,7 @@ void removeValor(ListaDuplamenteEncadeada* lista, int valor) {
 
     }
 
-    if (atual == NULL) { // Valor não encontrado
+    if (atual == NULL) { // Valor nÃ£o encontrado
 
         printf("Valor %d nao encontrado na lista.\n", valor);
         return;
@@ -133,7 +132,7 @@ void removeValor(ListaDuplamenteEncadeada* lista, int valor) {
 
 }
 
-// Função para imprimir o conteúdo da lista
+// FunÃ§Ã£o para imprimir o conteÃºdo da lista
 void imprime(ListaDuplamenteEncadeada* lista) {
 
     if (lista->inicio == NULL) {
@@ -159,7 +158,7 @@ int main() {
     ListaDuplamenteEncadeada lista;
     inicializaLista(&lista);
 
-    insereLista(&lista, 34, 0); // Inserir 34 no início
+    insereLista(&lista, 34, 0); // Inserir 34 no inÃ­cio
     insereLista(&lista, 89, 1); // Inserir 89 no final
     insereLista(&lista, 20, 1); // Inserir 20 no final
     imprime(&lista);
