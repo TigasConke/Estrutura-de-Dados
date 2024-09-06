@@ -56,7 +56,7 @@ void insereLista(ListaDuplamenteEncadeada* lista, int valor, int posicao) {
         } else {
 
             novoNo->proximo = lista->inicio;
-            lista->inicio->anterior = novoNo;
+            lista->inicio->anterior = novoNo; //nó inicio atual tem seu ponteiro anterior apontado para novoNo
             lista->inicio = novoNo;
 
         }
@@ -70,7 +70,7 @@ void insereLista(ListaDuplamenteEncadeada* lista, int valor, int posicao) {
         } else {
 
             novoNo->anterior = lista->fim;
-            lista->fim->proximo = novoNo;
+            lista->fim->proximo = novoNo; //nó final atual tem seu ponteiro proximo apontado para novoNo
             lista->fim = novoNo;
 
         }
